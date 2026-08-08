@@ -23,6 +23,10 @@ function wordmark(size) {
   );
 }
 
+function logoMark() {
+  return `<img src="assets/logo.png" alt="SÔMEN" class="logo-mark" />`;
+}
+
 /* ---------- Estado do carrinho ---------- */
 function getCart() {
   try {
@@ -131,7 +135,7 @@ function renderChrome(active) {
         <button class="nav-toggle" data-menu-toggle aria-label="Menu">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/></svg>
         </button>
-        <a href="index.html" class="logo">${wordmark()}</a>
+        <a href="index.html" class="logo">${logoMark()}</a>
         <nav class="nav-desktop">
           ${nav.map((n) => `<a href="${n.href}" data-cat="${n.cat}" class="${active === n.cat ? 'is-active' : ''}">${n.label}</a>`).join('')}
         </nav>

@@ -80,7 +80,16 @@ h1, h2, h3, h4 { font-family: var(--font-display); margin: 0; line-height: 1.05;
   fill: var(--amber);
 }
 .wm-lg { font-size: 2.1rem; }
-.logo { color: var(--text); }
+.logo { color: var(--text); display: inline-flex; align-items: center; }
+.logo-mark {
+  height: 26px;
+  width: auto;
+  display: block;
+  filter: brightness(0) invert(1);
+  opacity: 0.94;
+  transition: opacity 0.2s var(--ease);
+}
+.logo:hover .logo-mark { opacity: 1; }
 
 /* ---------- Eyebrow ---------- */
 .eyebrow {
